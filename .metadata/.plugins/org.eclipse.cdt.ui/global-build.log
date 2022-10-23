@@ -1,0 +1,583 @@
+19:06:12 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:166:13: error: 'sevOneNumberSevenSegment' undeclared (first use in this function); did you mean 'SevenNumberSevenSegment'?
+  166 |      sev = (sevOneNumberSevenSegment;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+      |             SevenNumberSevenSegment
+../Core/Src/main.c:166:13: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:166:37: error: expected ')' before ';' token
+  166 |      sev = (sevOneNumberSevenSegment;
+      |            ~                        ^
+      |                                     )
+../Core/Src/main.c:166:38: error: expected ';' before '}' token
+  166 |      sev = (sevOneNumberSevenSegment;
+      |                                      ^
+      |                                      ;
+  167 |     }
+      |     ~                                 
+At top level:
+../Core/Src/main.c:78:21: warning: 'NineNumberSevenSegment' defined but not used [-Wunused-variable]
+   78 | static SevenSegemnt NineNumberSevenSegment = {1,1,1,0,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:77:21: warning: 'EightNumberSevenSegment' defined but not used [-Wunused-variable]
+   77 | static SevenSegemnt EightNumberSevenSegment = {1,1,1,1,1,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:76:21: warning: 'SevenNumberSevenSegment' defined but not used [-Wunused-variable]
+   76 | static SevenSegemnt SevenNumberSevenSegment = {1,1,1,0,0,0,0};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:75:21: warning: 'SixNumberSevenSegment' defined but not used [-Wunused-variable]
+   75 | static SevenSegemnt SixNumberSevenSegment = {1,0,1,1,1,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:74:21: warning: 'FiveNumberSevenSegment' defined but not used [-Wunused-variable]
+   74 | static SevenSegemnt FiveNumberSevenSegment = {1,0,1,1,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:73:21: warning: 'FourNumberSevenSegment' defined but not used [-Wunused-variable]
+   73 | static SevenSegemnt FourNumberSevenSegment = {0,1,1,0,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:72:21: warning: 'ThreeNumberSevenSegment' defined but not used [-Wunused-variable]
+   72 | static SevenSegemnt ThreeNumberSevenSegment = {1,1,1,1,0,0,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:71:21: warning: 'TwoNumberSevenSegment' defined but not used [-Wunused-variable]
+   71 | static SevenSegemnt TwoNumberSevenSegment = {1,1,0,1,1,0,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:70:21: warning: 'OneNumberSevenSegment' defined but not used [-Wunused-variable]
+   70 | static SevenSegemnt OneNumberSevenSegment = {0,1,1,0,0,0,0};
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:69:21: warning: 'ZeroNumberSevenSegment' defined but not used [-Wunused-variable]
+   69 | static SevenSegemnt ZeroNumberSevenSegment = {1,1,1,1,1,1,0};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j9 all" terminated with exit code 2. Build might be incomplete.
+19:07:38 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:78:21: warning: 'NineNumberSevenSegment' defined but not used [-Wunused-variable]
+   78 | static SevenSegemnt NineNumberSevenSegment = {1,1,1,0,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:77:21: warning: 'EightNumberSevenSegment' defined but not used [-Wunused-variable]
+   77 | static SevenSegemnt EightNumberSevenSegment = {1,1,1,1,1,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:76:21: warning: 'SevenNumberSevenSegment' defined but not used [-Wunused-variable]
+   76 | static SevenSegemnt SevenNumberSevenSegment = {1,1,1,0,0,0,0};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:75:21: warning: 'SixNumberSevenSegment' defined but not used [-Wunused-variable]
+   75 | static SevenSegemnt SixNumberSevenSegment = {1,0,1,1,1,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:74:21: warning: 'FiveNumberSevenSegment' defined but not used [-Wunused-variable]
+   74 | static SevenSegemnt FiveNumberSevenSegment = {1,0,1,1,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:73:21: warning: 'FourNumberSevenSegment' defined but not used [-Wunused-variable]
+   73 | static SevenSegemnt FourNumberSevenSegment = {0,1,1,0,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:72:21: warning: 'ThreeNumberSevenSegment' defined but not used [-Wunused-variable]
+   72 | static SevenSegemnt ThreeNumberSevenSegment = {1,1,1,1,0,0,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Test.elf
+ 
+arm-none-eabi-size   Test.elf 
+arm-none-eabi-objdump -h -S  Test.elf  > "Test.list"
+   text	   data	    bss	    dec	    hex	filename
+  11580	     68	   2492	  14140	   373c	Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: Test.list
+ 
+19:08:51 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:78:21: warning: 'NineNumberSevenSegment' defined but not used [-Wunused-variable]
+   78 | static SevenSegemnt NineNumberSevenSegment = {1,1,1,0,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:77:21: warning: 'EightNumberSevenSegment' defined but not used [-Wunused-variable]
+   77 | static SevenSegemnt EightNumberSevenSegment = {1,1,1,1,1,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:76:21: warning: 'SevenNumberSevenSegment' defined but not used [-Wunused-variable]
+   76 | static SevenSegemnt SevenNumberSevenSegment = {1,1,1,0,0,0,0};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:75:21: warning: 'SixNumberSevenSegment' defined but not used [-Wunused-variable]
+   75 | static SevenSegemnt SixNumberSevenSegment = {1,0,1,1,1,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:74:21: warning: 'FiveNumberSevenSegment' defined but not used [-Wunused-variable]
+   74 | static SevenSegemnt FiveNumberSevenSegment = {1,0,1,1,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:73:21: warning: 'FourNumberSevenSegment' defined but not used [-Wunused-variable]
+   73 | static SevenSegemnt FourNumberSevenSegment = {0,1,1,0,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:72:21: warning: 'ThreeNumberSevenSegment' defined but not used [-Wunused-variable]
+   72 | static SevenSegemnt ThreeNumberSevenSegment = {1,1,1,1,0,0,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Test.elf
+ 
+arm-none-eabi-size   Test.elf 
+arm-none-eabi-objdump -h -S  Test.elf  > "Test.list"
+   text	   data	    bss	    dec	    hex	filename
+  11588	     68	   2492	  14148	   3744	Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: Test.list
+ 
+19:09:13 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:78:21: warning: 'NineNumberSevenSegment' defined but not used [-Wunused-variable]
+   78 | static SevenSegemnt NineNumberSevenSegment = {1,1,1,0,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:77:21: warning: 'EightNumberSevenSegment' defined but not used [-Wunused-variable]
+   77 | static SevenSegemnt EightNumberSevenSegment = {1,1,1,1,1,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:76:21: warning: 'SevenNumberSevenSegment' defined but not used [-Wunused-variable]
+   76 | static SevenSegemnt SevenNumberSevenSegment = {1,1,1,0,0,0,0};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:75:21: warning: 'SixNumberSevenSegment' defined but not used [-Wunused-variable]
+   75 | static SevenSegemnt SixNumberSevenSegment = {1,0,1,1,1,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:74:21: warning: 'FiveNumberSevenSegment' defined but not used [-Wunused-variable]
+   74 | static SevenSegemnt FiveNumberSevenSegment = {1,0,1,1,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:73:21: warning: 'FourNumberSevenSegment' defined but not used [-Wunused-variable]
+   73 | static SevenSegemnt FourNumberSevenSegment = {0,1,1,0,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:72:21: warning: 'ThreeNumberSevenSegment' defined but not used [-Wunused-variable]
+   72 | static SevenSegemnt ThreeNumberSevenSegment = {1,1,1,1,0,0,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Test.elf
+ 
+arm-none-eabi-size   Test.elf 
+arm-none-eabi-objdump -h -S  Test.elf  > "Test.list"
+   text	   data	    bss	    dec	    hex	filename
+  11588	     68	   2492	  14148	   3744	Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: Test.list
+ 
+19:10:28 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:78:21: warning: 'NineNumberSevenSegment' defined but not used [-Wunused-variable]
+   78 | static SevenSegemnt NineNumberSevenSegment = {1,1,1,0,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:77:21: warning: 'EightNumberSevenSegment' defined but not used [-Wunused-variable]
+   77 | static SevenSegemnt EightNumberSevenSegment = {1,1,1,1,1,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:76:21: warning: 'SevenNumberSevenSegment' defined but not used [-Wunused-variable]
+   76 | static SevenSegemnt SevenNumberSevenSegment = {1,1,1,0,0,0,0};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:75:21: warning: 'SixNumberSevenSegment' defined but not used [-Wunused-variable]
+   75 | static SevenSegemnt SixNumberSevenSegment = {1,0,1,1,1,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:74:21: warning: 'FiveNumberSevenSegment' defined but not used [-Wunused-variable]
+   74 | static SevenSegemnt FiveNumberSevenSegment = {1,0,1,1,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:73:21: warning: 'FourNumberSevenSegment' defined but not used [-Wunused-variable]
+   73 | static SevenSegemnt FourNumberSevenSegment = {0,1,1,0,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:72:21: warning: 'ThreeNumberSevenSegment' defined but not used [-Wunused-variable]
+   72 | static SevenSegemnt ThreeNumberSevenSegment = {1,1,1,1,0,0,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Test.elf
+ 
+arm-none-eabi-size   Test.elf 
+arm-none-eabi-objdump -h -S  Test.elf  > "Test.list"
+   text	   data	    bss	    dec	    hex	filename
+  11588	     68	   2492	  14148	   3744	Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: Test.list
+ 
+19:12:39 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:78:21: warning: 'NineNumberSevenSegment' defined but not used [-Wunused-variable]
+   78 | static SevenSegemnt NineNumberSevenSegment = {1,1,1,0,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:77:21: warning: 'EightNumberSevenSegment' defined but not used [-Wunused-variable]
+   77 | static SevenSegemnt EightNumberSevenSegment = {1,1,1,1,1,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:76:21: warning: 'SevenNumberSevenSegment' defined but not used [-Wunused-variable]
+   76 | static SevenSegemnt SevenNumberSevenSegment = {1,1,1,0,0,0,0};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:75:21: warning: 'SixNumberSevenSegment' defined but not used [-Wunused-variable]
+   75 | static SevenSegemnt SixNumberSevenSegment = {1,0,1,1,1,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:74:21: warning: 'FiveNumberSevenSegment' defined but not used [-Wunused-variable]
+   74 | static SevenSegemnt FiveNumberSevenSegment = {1,0,1,1,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:73:21: warning: 'FourNumberSevenSegment' defined but not used [-Wunused-variable]
+   73 | static SevenSegemnt FourNumberSevenSegment = {0,1,1,0,0,1,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:72:21: warning: 'ThreeNumberSevenSegment' defined but not used [-Wunused-variable]
+   72 | static SevenSegemnt ThreeNumberSevenSegment = {1,1,1,1,0,0,1};
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Test.elf
+ 
+arm-none-eabi-size   Test.elf 
+arm-none-eabi-objdump -h -S  Test.elf  > "Test.list"
+   text	   data	    bss	    dec	    hex	filename
+  11696	     68	   2492	  14256	   37b0	Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: Test.list
+ 
+19:13:48 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Test.elf
+ 
+arm-none-eabi-size   Test.elf 
+arm-none-eabi-objdump -h -S  Test.elf  > "Test.list"
+   text	   data	    bss	    dec	    hex	filename
+  11848	    180	   2492	  14520	   38b8	Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: Test.list
+ 
+19:14:41 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-size   Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11848	    180	   2492	  14520	   38b8	Test.elf
+Finished building: default.size.stdout
+ 
+19:16:03 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Test.elf
+ 
+arm-none-eabi-size   Test.elf 
+arm-none-eabi-objdump -h -S  Test.elf  > "Test.list"
+   text	   data	    bss	    dec	    hex	filename
+  11860	    180	   2492	  14532	   38c4	Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: Test.list
+ 
+19:23:07 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Test.elf
+ 
+arm-none-eabi-size   Test.elf 
+arm-none-eabi-objdump -h -S  Test.elf  > "Test.list"
+   text	   data	    bss	    dec	    hex	filename
+  12112	    180	   2492	  14784	   39c0	Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: Test.list
+ 
+19:31:51 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_exti.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f3xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f3xx_hal_msp.d" -MT"Core/Src/stm32f3xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f3xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f3xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f3xx_it.d" -MT"Core/Src/stm32f3xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f3xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f3xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f3xx.d" -MT"Core/Src/system_stm32f3xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f3xx.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:155:5: error: 'counter' undeclared (first use in this function)
+  155 |     counter++;
+      |     ^~~~~~~
+../Core/Src/main.c:155:5: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:157:6: error: 'onBoardLEDNumber' undeclared (first use in this function)
+  157 |      onBoardLEDNumber++;
+      |      ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:223:6: warning: implicit declaration of function 'AL_GPIO_WritePin'; did you mean 'HAL_GPIO_WritePin'? [-Wimplicit-function-declaration]
+  223 |      AL_GPIO_WritePin(GPIOC,GPIO_PIN_1, 1);
+      |      ^~~~~~~~~~~~~~~~
+      |      HAL_GPIO_WritePin
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j9 all" terminated with exit code 2. Build might be incomplete.
+19:32:20 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:226:6: warning: implicit declaration of function 'AL_GPIO_WritePin'; did you mean 'HAL_GPIO_WritePin'? [-Wimplicit-function-declaration]
+  226 |      AL_GPIO_WritePin(GPIOC,GPIO_PIN_1, 1);
+      |      ^~~~~~~~~~~~~~~~
+      |      HAL_GPIO_WritePin
+arm-none-eabi-gcc -o "Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `main':
+/Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/Debug/../Core/Src/main.c:226: undefined reference to `AL_GPIO_WritePin'
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/Debug/../Core/Src/main.c:234: undefined reference to `AL_GPIO_WritePin'
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/Debug/../Core/Src/main.c:242: undefined reference to `AL_GPIO_WritePin'
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/Debug/../Core/Src/main.c:250: undefined reference to `AL_GPIO_WritePin'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:64: Test.elf] Error 1
+"make -j9 all" terminated with exit code 2. Build might be incomplete.
+19:32:34 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:234:10: warning: implicit declaration of function 'AL_GPIO_WritePin'; did you mean 'HAL_GPIO_WritePin'? [-Wimplicit-function-declaration]
+  234 |          AL_GPIO_WritePin(GPIOC,GPIO_PIN_1, 1);
+      |          ^~~~~~~~~~~~~~~~
+      |          HAL_GPIO_WritePin
+arm-none-eabi-gcc -o "Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `main':
+/Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/Debug/../Core/Src/main.c:234: undefined reference to `AL_GPIO_WritePin'
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/Debug/../Core/Src/main.c:242: undefined reference to `AL_GPIO_WritePin'
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/Debug/../Core/Src/main.c:250: undefined reference to `AL_GPIO_WritePin'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:64: Test.elf] Error 1
+"make -j9 all" terminated with exit code 2. Build might be incomplete.
+19:32:44 **** Incremental Build of configuration Debug for project Test ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/kiarashvosough/Desktop/University/CubeWorkspace/Test/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Test.elf
+ 
+arm-none-eabi-size   Test.elf 
+arm-none-eabi-objdump -h -S  Test.elf  > "Test.list"
+   text	   data	    bss	    dec	    hex	filename
+  12212	    180	   2492	  14884	   3a24	Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: Test.list
+ 
+19:50:04 **** Build of configuration Debug for project SelfCoded ****
+make -j9 all 
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_exti.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f303vctx.d" -MT"Core/Startup/startup_stm32f303vctx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f303vctx.o" "../Core/Startup/startup_stm32f303vctx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f3xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f3xx_hal_msp.d" -MT"Core/Src/stm32f3xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f3xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f3xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f3xx_it.d" -MT"Core/Src/stm32f3xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f3xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f3xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f3xx.d" -MT"Core/Src/system_stm32f3xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f3xx.o"
+arm-none-eabi-gcc -o "SelfCoded.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/kiarashvosough/Desktop/University/CubeWorkspace/SelfCoded/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SelfCoded.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SelfCoded.elf
+ 
+arm-none-eabi-size   SelfCoded.elf 
+arm-none-eabi-objdump -h -S  SelfCoded.elf  > "SelfCoded.list"
+   text	   data	    bss	    dec	    hex	filename
+   6892	     20	   1572	   8484	   2124	SelfCoded.elf
+Finished building: default.size.stdout
+ 
+Finished building: SelfCoded.list
+ 
+19:50:09 **** Incremental Build of configuration Debug for project SelfCoded ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:129:1: error: unknown type name 'SPI_HandleTypeDef'; did you mean 'I2C_HandleTypeDef'?
+  129 | SPI_HandleTypeDef hspi1;
+      | ^~~~~~~~~~~~~~~~~
+      | I2C_HandleTypeDef
+../Core/Src/main.c:131:1: error: unknown type name 'PCD_HandleTypeDef'; did you mean 'I2C_HandleTypeDef'?
+  131 | PCD_HandleTypeDef hpcd_USB_FS;
+      | ^~~~~~~~~~~~~~~~~
+      | I2C_HandleTypeDef
+../Core/Src/main.c: In function 'MX_SPI1_Init':
+../Core/Src/main.c:429:8: error: request for member 'Instance' in something not a structure or union
+  429 |   hspi1.Instance = SPI1;
+      |        ^
+../Core/Src/main.c:430:8: error: request for member 'Init' in something not a structure or union
+  430 |   hspi1.Init.Mode = SPI_MODE_MASTER;
+      |        ^
+../Core/Src/main.c:430:21: error: 'SPI_MODE_MASTER' undeclared (first use in this function); did you mean 'HAL_I2C_MODE_MASTER'?
+  430 |   hspi1.Init.Mode = SPI_MODE_MASTER;
+      |                     ^~~~~~~~~~~~~~~
+      |                     HAL_I2C_MODE_MASTER
+../Core/Src/main.c:430:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:431:8: error: request for member 'Init' in something not a structure or union
+  431 |   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+      |        ^
+../Core/Src/main.c:431:26: error: 'SPI_DIRECTION_2LINES' undeclared (first use in this function)
+  431 |   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+      |                          ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:432:8: error: request for member 'Init' in something not a structure or union
+  432 |   hspi1.Init.DataSize = SPI_DATASIZE_4BIT;
+      |        ^
+../Core/Src/main.c:432:25: error: 'SPI_DATASIZE_4BIT' undeclared (first use in this function)
+  432 |   hspi1.Init.DataSize = SPI_DATASIZE_4BIT;
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:433:8: error: request for member 'Init' in something not a structure or union
+  433 |   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+      |        ^
+../Core/Src/main.c:433:28: error: 'SPI_POLARITY_LOW' undeclared (first use in this function)
+  433 |   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+      |                            ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:434:8: error: request for member 'Init' in something not a structure or union
+  434 |   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+      |        ^
+../Core/Src/main.c:434:25: error: 'SPI_PHASE_1EDGE' undeclared (first use in this function)
+  434 |   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+      |                         ^~~~~~~~~~~~~~~
+../Core/Src/main.c:435:8: error: request for member 'Init' in something not a structure or union
+  435 |   hspi1.Init.NSS = SPI_NSS_SOFT;
+      |        ^
+../Core/Src/main.c:435:20: error: 'SPI_NSS_SOFT' undeclared (first use in this function)
+  435 |   hspi1.Init.NSS = SPI_NSS_SOFT;
+      |                    ^~~~~~~~~~~~
+../Core/Src/main.c:436:8: error: request for member 'Init' in something not a structure or union
+  436 |   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
+      |        ^
+../Core/Src/main.c:436:34: error: 'SPI_BAUDRATEPRESCALER_4' undeclared (first use in this function)
+  436 |   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:437:8: error: request for member 'Init' in something not a structure or union
+  437 |   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+      |        ^
+../Core/Src/main.c:437:25: error: 'SPI_FIRSTBIT_MSB' undeclared (first use in this function)
+  437 |   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+      |                         ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:438:8: error: request for member 'Init' in something not a structure or union
+  438 |   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+      |        ^
+../Core/Src/main.c:438:23: error: 'SPI_TIMODE_DISABLE' undeclared (first use in this function); did you mean 'SPI_TIMODE_DISABLED'?
+  438 |   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+      |                       ^~~~~~~~~~~~~~~~~~
+      |                       SPI_TIMODE_DISABLED
+../Core/Src/main.c:439:8: error: request for member 'Init' in something not a structure or union
+  439 |   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+      |        ^
+../Core/Src/main.c:439:31: error: 'SPI_CRCCALCULATION_DISABLE' undeclared (first use in this function); did you mean 'SPI_CRCCALCULATION_DISABLED'?
+  439 |   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                               SPI_CRCCALCULATION_DISABLED
+../Core/Src/main.c:440:8: error: request for member 'Init' in something not a structure or union
+  440 |   hspi1.Init.CRCPolynomial = 7;
+      |        ^
+../Core/Src/main.c:441:8: error: request for member 'Init' in something not a structure or union
+  441 |   hspi1.Init.CRCLength = SPI_CRC_LENGTH_DATASIZE;
+      |        ^
+../Core/Src/main.c:441:26: error: 'SPI_CRC_LENGTH_DATASIZE' undeclared (first use in this function)
+  441 |   hspi1.Init.CRCLength = SPI_CRC_LENGTH_DATASIZE;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:442:8: error: request for member 'Init' in something not a structure or union
+  442 |   hspi1.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+      |        ^
+../Core/Src/main.c:442:25: error: 'SPI_NSS_PULSE_ENABLE' undeclared (first use in this function); did you mean 'SPI_NSS_PULSE_ENABLED'?
+  442 |   hspi1.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+      |                         ^~~~~~~~~~~~~~~~~~~~
+      |                         SPI_NSS_PULSE_ENABLED
+../Core/Src/main.c:443:7: warning: implicit declaration of function 'HAL_SPI_Init'; did you mean 'HAL_GPIO_Init'? [-Wimplicit-function-declaration]
+  443 |   if (HAL_SPI_Init(&hspi1) != HAL_OK)
+      |       ^~~~~~~~~~~~
+      |       HAL_GPIO_Init
+../Core/Src/main.c: In function 'MX_USB_PCD_Init':
+../Core/Src/main.c:468:14: error: request for member 'Instance' in something not a structure or union
+  468 |   hpcd_USB_FS.Instance = USB;
+      |              ^
+../Core/Src/main.c:469:14: error: request for member 'Init' in something not a structure or union
+  469 |   hpcd_USB_FS.Init.dev_endpoints = 8;
+      |              ^
+../Core/Src/main.c:470:14: error: request for member 'Init' in something not a structure or union
+  470 |   hpcd_USB_FS.Init.speed = PCD_SPEED_FULL;
+      |              ^
+../Core/Src/main.c:470:28: error: 'PCD_SPEED_FULL' undeclared (first use in this function)
+  470 |   hpcd_USB_FS.Init.speed = PCD_SPEED_FULL;
+      |                            ^~~~~~~~~~~~~~
+../Core/Src/main.c:471:14: error: request for member 'Init' in something not a structure or union
+  471 |   hpcd_USB_FS.Init.phy_itface = PCD_PHY_EMBEDDED;
+      |              ^
+../Core/Src/main.c:471:33: error: 'PCD_PHY_EMBEDDED' undeclared (first use in this function)
+  471 |   hpcd_USB_FS.Init.phy_itface = PCD_PHY_EMBEDDED;
+      |                                 ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:472:14: error: request for member 'Init' in something not a structure or union
+  472 |   hpcd_USB_FS.Init.low_power_enable = DISABLE;
+      |              ^
+../Core/Src/main.c:473:14: error: request for member 'Init' in something not a structure or union
+  473 |   hpcd_USB_FS.Init.battery_charging_enable = DISABLE;
+      |              ^
+../Core/Src/main.c:474:7: warning: implicit declaration of function 'HAL_PCD_Init'; did you mean 'HAL_DeInit'? [-Wimplicit-function-declaration]
+  474 |   if (HAL_PCD_Init(&hpcd_USB_FS) != HAL_OK)
+      |       ^~~~~~~~~~~~
+      |       HAL_DeInit
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:139:13: warning: 'MX_GPIO_Init' declared 'static' but never defined [-Wunused-function]
+  139 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j9 all" terminated with exit code 2. Build might be incomplete.
+19:51:07 **** Incremental Build of configuration Debug for project SelfCoded ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:168:3: warning: implicit declaration of function 'SystemClock_Config'; did you mean 'SysTick_Config'? [-Wimplicit-function-declaration]
+  168 |   SystemClock_Config();
+      |   ^~~~~~~~~~~~~~~~~~
+      |   SysTick_Config
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:317:6: warning: conflicting types for 'SystemClock_Config'
+  317 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:168:3: note: previous implicit declaration of 'SystemClock_Config' was here
+  168 |   SystemClock_Config();
+      |   ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_I2C1_Init':
+../Core/Src/main.c:376:3: error: 'hi2c1' undeclared (first use in this function)
+  376 |   hi2c1.Instance = I2C1;
+      |   ^~~~~
+../Core/Src/main.c:376:3: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../Core/Src/main.c:366:13: warning: 'MX_I2C1_Init' defined but not used [-Wunused-function]
+  366 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j9 all" terminated with exit code 2. Build might be incomplete.
+19:51:20 **** Incremental Build of configuration Debug for project SelfCoded ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:168:3: warning: implicit declaration of function 'SystemClock_Config'; did you mean 'SysTick_Config'? [-Wimplicit-function-declaration]
+  168 |   SystemClock_Config();
+      |   ^~~~~~~~~~~~~~~~~~
+      |   SysTick_Config
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:317:6: warning: conflicting types for 'SystemClock_Config'
+  317 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:168:3: note: previous implicit declaration of 'SystemClock_Config' was here
+  168 |   SystemClock_Config();
+      |   ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "SelfCoded.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/kiarashvosough/Desktop/University/CubeWorkspace/SelfCoded/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SelfCoded.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SelfCoded.elf
+ 
+arm-none-eabi-size   SelfCoded.elf 
+arm-none-eabi-objdump -h -S  SelfCoded.elf  > "SelfCoded.list"
+   text	   data	    bss	    dec	    hex	filename
+   9976	    180	   1572	  11728	   2dd0	SelfCoded.elf
+Finished building: default.size.stdout
+ 
+Finished building: SelfCoded.list
+ 
