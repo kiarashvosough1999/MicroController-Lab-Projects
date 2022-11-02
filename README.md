@@ -5,3 +5,4 @@ The mini projects related to MicroController Lab can be found here on separate f
 ## Mini Projects
 
 1. SevenSegment
+2. SevenSegmentCalculator
