@@ -62,114 +62,71 @@ static void MX_USB_PCD_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-typedef struct {
-    uint16_t A;
-    uint16_t B;
-    uint16_t C;
-    uint16_t D;
-    uint16_t E;
-    uint16_t F;
-    uint16_t G;
-} SevenSegemnt;
 
-SevenSegemnt initSevenSegment(
-        uint16_t A,
-        uint16_t B,
-        uint16_t C,
-        uint16_t D,
-        uint16_t E,
-        uint16_t F,
-        uint16_t G
-) {
-    SevenSegemnt sevenSegemnt;
-    sevenSegemnt.A = A;
-    sevenSegemnt.B = B;
-    sevenSegemnt.C = C;
-    sevenSegemnt.D = D;
-    sevenSegemnt.E = E;
-    sevenSegemnt.F = F;
-    sevenSegemnt.G = G;
-    return sevenSegemnt;
-}
-
-void pringSevenSegment(SevenSegemnt sevenSegemnt) {
-    printf("A: %d\n", sevenSegemnt.A);
-    printf("B: %d\n", sevenSegemnt.B);
-    printf("C: %d\n", sevenSegemnt.C);
-    printf("D: %d\n", sevenSegemnt.D);
-    printf("E: %d\n", sevenSegemnt.E);
-    printf("F: %d\n", sevenSegemnt.F);
-    printf("G: %d\n", sevenSegemnt.G);
-}
-
-static SevenSegemnt OneNumberSevenSegment = {0,1,1,0,0,0,0};
-static SevenSegemnt TwoNumberSevenSegment = {1,1,0,1,1,0,1};
-static SevenSegemnt ThreeNumberSevenSegment = {1,1,1,1,0,0,1};
-static SevenSegemnt FourNumberSevenSegment = {0,1,1,0,0,1,1};
-static SevenSegemnt FiveNumberSevenSegment = {1,0,1,1,0,1,1};
-static SevenSegemnt SixNumberSevenSegment = {1,0,1,1,1,1,1};
-static SevenSegemnt SevenNumberSevenSegment = {1,1,1,0,0,0,0};
-static SevenSegemnt EightNumberSevenSegment = {1,1,1,1,1,1,1};
-static SevenSegemnt NineNumberSevenSegment = {1,1,1,0,0,1,1};
-
-SevenSegemnt* detectSevenSegmentPinOutputs(uint16_t number) {
-    switch (number) {
-        case 1: return &OneNumberSevenSegment;
-        case 2: return &TwoNumberSevenSegment;
-        case 3: return &ThreeNumberSevenSegment;
-        case 4: return &FourNumberSevenSegment;
-        case 5: return &FiveNumberSevenSegment;
-        case 6: return &SixNumberSevenSegment;
-        case 7: return &SevenNumberSevenSegment;
-        case 8: return &EightNumberSevenSegment;
-        case 9: return &NineNumberSevenSegment;
-        default: return NULL;
-    }
-}
-
-int* decToBinary(int n)
-{
-	int r[4]; // 4 bit is enough for number 0 - 9
-    // Size of an integer is assumed to be 4 bits
+void decToBinary(int* array, int n) {
     for (int i = 3; i >= 0; i--) {
-        int k = n >> i; // right shift
-        if (k & 1) r[i] = 1; // helps us know the state of first bit
-        else r[i] = 0;
+        int k = n >> i;
+        if (k & 1) array[i] = 1;
+        else array[i] = 0;
     }
-    return r;
 }
 
-uint16_t roundToBinary(uint16_t anyBit) {
-    return anyBit > 0 ? anyBit/anyBit : 0;
+void showNumber(int number) {
+	 int arr[4] = {0};
+	 decToBinary(arr, number);
+
+	 int bcd_A = arr[0];
+	 int bcd_B = arr[1];
+	 int bcd_C = arr[2];
+	 int bcd_D = arr[3];
+
+	 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_0, bcd_D);
+	 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_1, bcd_C);
+	 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_2, bcd_B);
+	 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_3, bcd_A);
 }
 
-SevenSegemnt BCDDecoder(int number) {
-    uint16_t* bits = decToBinary(number);
+typedef enum Segment {
+	A,B,C,D
+} Segment;
 
-    uint16_t bcd_A = bits[3];
-    uint16_t bcd_B = bits[2];
-    uint16_t bcd_C = bits[1];
-    uint16_t bcd_D = bits[0];
+void resetAndEnableSegment(Segment segment) {
+    HAL_GPIO_WritePin(GPIOD,GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11, 1);
 
-    uint16_t decode_A = ((!bcd_B) * (!bcd_D)) + bcd_C + (bcd_B*bcd_D) + bcd_A;
-    uint16_t decode_B = (!bcd_B) + (!bcd_C) * (!bcd_D) + (bcd_C*bcd_D);
-    uint16_t decode_C = (!bcd_C) + bcd_D + bcd_B;
-    uint16_t decode_D = ((!bcd_B) * (!bcd_D)) + ((!bcd_B) * (bcd_C)) + ((bcd_B) * (!bcd_C) + (!bcd_D)) + ((bcd_C) * (!bcd_D)) + bcd_A;
-    uint16_t decode_E = ((!bcd_B) * (!bcd_D)) +  ((bcd_B) * (!bcd_D));
-    uint16_t decode_F = ((!bcd_C) * (!bcd_D)) + ( (bcd_B) * (!bcd_C)) + ((bcd_B) * (!bcd_D)) + bcd_A;
-    uint16_t decode_G = ((!bcd_B) * (bcd_C)) + ((bcd_B) * (!bcd_C)) + ((bcd_B) * (!bcd_D)) + bcd_A;
+    switch(segment) {
+    case A: HAL_GPIO_WritePin(GPIOD,GPIO_PIN_8, 0); break;
+    case B: HAL_GPIO_WritePin(GPIOD,GPIO_PIN_9, 0); break;
+    case C:	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_10, 0); break;
+    case D:	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_11, 0); break;
+    }
+}
 
-    SevenSegemnt sevenSegment = {
-            roundToBinary(decode_A),
-            roundToBinary(decode_B),
-            roundToBinary(decode_C),
-            roundToBinary(decode_D),
-            roundToBinary(decode_E),
-            roundToBinary(decode_F),
-            roundToBinary(decode_G)
+int counter = 0;
 
-    };
-    return sevenSegment;
+void updateCounter() {
+
+    resetAndEnableSegment(A);
+    int tenDigit = counter/10;
+	showNumber(tenDigit);
+
+	HAL_Delay(3);
+	int oneDigit = counter%10;
+	resetAndEnableSegment(B);
+	showNumber(oneDigit);
+}
+
+
+void updateSum() {
+	int sum = counter/10 + counter%10;
+
+    resetAndEnableSegment(C);
+    int tenDigit = sum/10;
+	showNumber(tenDigit);
+
+	HAL_Delay(3);
+	int oneDigit = sum%10;
+	resetAndEnableSegment(D);
+	showNumber(oneDigit);
 }
 
 /* USER CODE END 0 */
@@ -190,6 +147,8 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
+
+  HAL_SYSTICK_Config(SystemCoreClock / (1000U / 1));
 
   /* USER CODE END Init */
 
@@ -215,26 +174,16 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-	  int* bits = decToBinary(4);
-
-	    int bcd_A = bits[3];
-	    int bcd_B = bits[2];
-	    int bcd_C = bits[1];
-	    int bcd_D = bits[0];
-
-	  HAL_GPIO_WritePin(GPIOC,GPIO_PIN_3, 0);
-	  HAL_GPIO_WritePin(GPIOC,GPIO_PIN_2, 0);
-	  HAL_GPIO_WritePin(GPIOC,GPIO_PIN_1, 0);
-	  HAL_GPIO_WritePin(GPIOC,GPIO_PIN_0, 1);
-
-
-//	  HAL_GPIO_WritePin(GPIOC,GPIO_PIN_0, 1);
-//	  HAL_GPIO_WritePin(GPIOC,GPIO_PIN_1, 0);
-//	  HAL_GPIO_WritePin(GPIOC,GPIO_PIN_2, 0);
-//	  HAL_GPIO_WritePin(GPIOC,GPIO_PIN_3, 0);
-
-
     /* USER CODE BEGIN 3 */
+
+	updateCounter();
+
+	HAL_Delay(3);
+
+	updateSum();
+
+	HAL_Delay(3);
+
   }
   /* USER CODE END 3 */
 }
@@ -420,6 +369,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
@@ -430,10 +380,11 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : DRDY_Pin MEMS_INT3_Pin MEMS_INT4_Pin MEMS_INT1_Pin
-                           MEMS_INT2_Pin */
-  GPIO_InitStruct.Pin = DRDY_Pin|MEMS_INT3_Pin|MEMS_INT4_Pin|MEMS_INT1_Pin
-                          |MEMS_INT2_Pin;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10|GPIO_PIN_11, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : DRDY_Pin MEMS_INT3_Pin MEMS_INT4_Pin MEMS_INT2_Pin */
+  GPIO_InitStruct.Pin = DRDY_Pin|MEMS_INT3_Pin|MEMS_INT4_Pin|MEMS_INT2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_EVT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
@@ -456,11 +407,22 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : B1_Pin */
-  GPIO_InitStruct.Pin = B1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  /*Configure GPIO pin : PA0 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PD8 PD9 PD10 PD11 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10|GPIO_PIN_11;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
 
 }
 

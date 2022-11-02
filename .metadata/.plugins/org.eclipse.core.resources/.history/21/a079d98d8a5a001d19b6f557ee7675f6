@@ -220,7 +220,7 @@ void EXTI0_IRQHandler(void)
 
 		waitingTime = -1;
 	} else { // for second time
-//		HAL_GPIO_WritePin(GPIOE,GPIO_PIN_8 | GPIO_PIN_15, 0);
+		HAL_GPIO_WritePin(GPIOE,GPIO_PIN_8 | GPIO_PIN_15, 0);
 		waitingTime = HAL_GetTick();
 	}
   /* USER CODE END EXTI0_IRQn 0 */

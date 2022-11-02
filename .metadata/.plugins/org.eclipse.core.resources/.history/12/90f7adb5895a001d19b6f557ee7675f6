@@ -52,9 +52,6 @@
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-static int waitingTime = -1;
-extern int counter;
-
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -204,6 +201,10 @@ void SysTick_Handler(void)
 /**
   * @brief This function handles EXTI line0 interrupt.
   */
+
+static int waitingTime = -1;
+extern int counter;
+
 void EXTI0_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI0_IRQn 0 */
@@ -220,7 +221,7 @@ void EXTI0_IRQHandler(void)
 
 		waitingTime = -1;
 	} else { // for second time
-//		HAL_GPIO_WritePin(GPIOE,GPIO_PIN_8 | GPIO_PIN_15, 0);
+		HAL_GPIO_WritePin(GPIOE,GPIO_PIN_8 | GPIO_PIN_15, 0);
 		waitingTime = HAL_GetTick();
 	}
   /* USER CODE END EXTI0_IRQn 0 */

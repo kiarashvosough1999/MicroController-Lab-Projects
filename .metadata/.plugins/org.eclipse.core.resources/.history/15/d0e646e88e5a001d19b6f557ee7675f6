@@ -212,7 +212,7 @@ void EXTI0_IRQHandler(void)
 
 		int range = HAL_GetTick() - waitingTime;
 
-		if (range >= 2000) { // if user hold button for more than 2000ms, we reset the number
+		if (range >= 1000) { // if user hold button for more than 2000ms, we reset the number
 			counter = 0;
 		} else { // else we just increment number
 			counter++;
