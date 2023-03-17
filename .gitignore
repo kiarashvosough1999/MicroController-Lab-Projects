@@ -348,5 +348,12 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
+Debug/**
+Drivers/**
+Debug/
+Drivers/
+.metadata
+.metadata/**
+
 # End of 
 https://www.toptal.com/developers/gitignore/api/macos,clion,clion+all,clion+iml,c++,c
